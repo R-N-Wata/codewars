@@ -13,3 +13,5 @@ function toCamelCase(str){
   })
   
   return result.filter(el => el).join('')
+
+}
