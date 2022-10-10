@@ -1,13 +1,16 @@
 function cleanString(s) {
 //   ... your code ...
-  s = s.split('')
-  let result = []
+  s = [...s]
+  const arr = []
   
-  for(let i = 0; i <= s.length; i++){
-    if(s[i] === '#'){
-      result.pop()
-    }else result.push(s[i])
-        }
+  for(let i = 0; i <= s.length ; i++){
+    if(s[i] !== '#'){
+      arr.push(s[i])
+    }else{
+      arr.pop()
+    }
+
+  }
   
-  return result.join('')
+  return arr.join('')
 }
