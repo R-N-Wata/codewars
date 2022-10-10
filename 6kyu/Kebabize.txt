@@ -1,0 +1,17 @@
+function kebabize(str) {
+  // return
+  
+  let result = []
+  
+  const letters = 'abcdefghijklmnopqrstuvwxyz'
+  
+  str.split('').forEach((el, i)=> {
+    if(letters.includes(el.toLowerCase())){
+      if(el === el.toUpperCase() && i === 0)result.push(el.toLowerCase())
+      else if(  i !== 0 && el === el.toUpperCase() )result.push(`-${el.toLowerCase()}`)
+      else if(el !== el.toUpperCase() ) result.push(el)
+    }
+  })
+  
+  return result.join('')
+}
