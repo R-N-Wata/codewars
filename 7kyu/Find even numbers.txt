@@ -1,0 +1,12 @@
+function evenNumbers(array, length) {
+
+  // loop through array finding the even numbers => num % 2 == 0
+
+  const even = array.filter(num => num % 2 === 0)
+
+  // take the new array and starting from the end extract length === length
+
+  return even.slice(-(length))
+
+  
+}
